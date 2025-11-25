@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="header-content">
+            <div class="title-wrapper">
                 <svg class="trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
                     <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
@@ -32,60 +32,77 @@
         </div>
 
         <div class="filters-container">
-            <div class="filter-grid">
-                <div class="filter-group">
-                    <label>Search</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="text" id="searchInput" placeholder="Player, team, or year...">
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <label>Filter by Player</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                        </svg>
-                        <select id="playerFilter"></select>
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <label>Filter by Era</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                            <polyline points="16 7 22 7 22 13"></polyline>
-                        </svg>
-                        <select id="eraFilter"></select>
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <label>Filter by Leader Category</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                        <select id="leaderFilter"></select>
-                    </div>
+            <div class="filter-group">
+                <label>Search</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Player, team, or year...">
                 </div>
             </div>
-            <button id="toggleFormula" class="formula-toggle">Show Formula Details</button>
-            <div id="formulaDetails" class="formula-details hidden">
-                <p class="formula-title">Scoring Formula:</p>
-                <p class="formula-main">Score = (ANY/A+ ÷ 2) + (Cmp%+ ÷ 2) + (TD%+ ÷ 2) + (INT%+ ÷ 2) + (Rate+ ÷ 2) + Bonuses</p>
-                <p class="formula-bonuses-title"><strong>Bonuses:</strong></p>
-                <ul class="formula-bonuses-list">
-                    <li>• League Leader Passing Yards: +10 pts</li>
-                    <li>• League Leader Passing TDs: +10 pts</li>
-                    <li>• QB Leader Rushing Yards: +5 pts</li>
-                    <li>• QB Leader Rushing TDs: +2.5 pts</li>
-                    <li>• 500+ QB Rushing Yards (non-leader): +2.5 pts</li>
-                </ul>
+
+            <div class="filter-group">
+                <label>Filter by Player</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                    <select id="playerFilter"></select>
+                </div>
             </div>
+
+            <div class="filter-group">
+                <label>Filter by Era</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                        <polyline points="16 7 22 7 22 13"></polyline>
+                    </svg>
+                    <select id="eraFilter">
+                        <option value="All">All</option>
+                        <option value="2020s">2020s</option>
+                        <option value="2010s">2010s</option>
+                        <option value="2000s">2000s</option>
+                        <option value="1990s">1990s</option>
+                        <option value="1980s">1980s</option>
+                        <option value="1970s">1970s</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Filter by Leader Category</label>
+                <div class="input-wrapper">
+                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                    <select id="leaderFilter">
+                        <option value="All">All</option>
+                        <option value="Pass Yards Leader">Pass Yards Leader</option>
+                        <option value="Pass TD Leader">Pass TD Leader</option>
+                        <option value="Rush Yards Leader">Rush Yards Leader</option>
+                        <option value="Rush TD Leader">Rush TD Leader</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button id="formulaToggle" class="formula-toggle">Show Formula Details</button>
+
+        <div id="formulaDetails" class="formula-details hidden">
+            <p class="formula-title">Scoring Formula:</p>
+            <p class="formula-text">Score = (ANY/A+ ÷ 2) + (Cmp%+ ÷ 2) + (TD%+ ÷ 2) + (INT%+ ÷ 2) + (Rate+ ÷ 2) + Bonuses</p>
+            <p class="formula-subtitle"><strong>Bonuses:</strong></p>
+            <ul class="formula-list">
+                <li>• League Leader Passing Yards: +10 pts</li>
+                <li>• League Leader Passing TDs: +10 pts</li>
+                <li>• QB Leader Rushing Yards: +5 pts</li>
+                <li>• QB Leader Rushing TDs: +2.5 pts</li>
+                <li>• 500+ QB Rushing Yards (non-leader): +2.5 pts</li>
+            </ul>
         </div>
 
         <div class="table-container">
@@ -106,12 +123,12 @@
             </table>
         </div>
 
-        <div class="top-ten-container">
+        <div class="top-10">
             <h3>🏈 Top 10 All-Time QB Seasons</h3>
-            <div class="top-ten-list">
-                <p><strong class="rank-1">1. Peyton Manning 2004:</strong> 369.5</p>
-                <p><strong class="rank-2">2. Tom Brady 2007:</strong> 369.0</p>
-                <p><strong class="rank-3">3. Dan Marino 1984:</strong> 360.5</p>
+            <div class="top-10-list">
+                <p><strong class="gold">1. Peyton Manning 2004:</strong> 369.5</p>
+                <p><strong class="silver">2. Tom Brady 2007:</strong> 369.0</p>
+                <p><strong class="bronze">3. Dan Marino 1984:</strong> 360.5</p>
                 <p><strong>4. Steve Young 1994:</strong> 356.5</p>
                 <p><strong>5. Peyton Manning 2013:</strong> 353.0</p>
                 <p><strong>6. Aaron Rodgers 2011:</strong> 351.5</p>
@@ -130,17 +147,24 @@
                     <h2 id="modalTitle"></h2>
                     <p id="modalSubtitle"></p>
                 </div>
-                <button id="closeModal" class="close-button">×</button>
+                <button id="modalClose" class="modal-close">×</button>
             </div>
+
             <div class="modal-body">
                 <h3>Index Stats Breakdown</h3>
-                <div id="statsGrid" class="stats-grid"></div>
-                <div id="seasonStats" class="season-stats"></div>
+                <div class="stats-grid" id="statsGrid"></div>
+
+                <div class="season-stats">
+                    <h3>Season Statistics</h3>
+                    <div class="season-stats-grid" id="seasonStatsGrid"></div>
+                </div>
             </div>
-            <button id="closeModalBottom" class="close-button-bottom">Close</button>
+
+            <button id="modalCloseBtn" class="modal-close-btn">Close</button>
         </div>
     </div>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

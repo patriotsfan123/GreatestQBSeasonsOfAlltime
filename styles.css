@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 50%, #16213e 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     min-height: 100vh;
     padding: 2rem 1rem;
 }
@@ -16,13 +16,13 @@ body {
     margin: 0 auto;
 }
 
-/* Header Styles */
+/* Header */
 .header {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.header-content {
+.title-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +43,12 @@ h1 {
 }
 
 .subtitle {
+    font-size: 1.25rem;
     color: #9ca3af;
-    font-size: 1.5rem;
     font-weight: 600;
 }
 
-/* Filters Container */
+/* Filters */
 .filters-container {
     background: rgba(31, 41, 55, 0.8);
     backdrop-filter: blur(10px);
@@ -56,13 +56,9 @@ h1 {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid #3b82f6;
-}
-
-.filter-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .filter-group label {
@@ -85,6 +81,7 @@ h1 {
     width: 1.25rem;
     height: 1.25rem;
     color: #9ca3af;
+    pointer-events: none;
 }
 
 input, select {
@@ -94,7 +91,7 @@ input, select {
     color: white;
     border: 1px solid #374151;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
     outline: none;
     transition: border-color 0.2s;
 }
@@ -104,10 +101,15 @@ input:focus, select:focus {
 }
 
 select {
-    appearance: none;
     cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239ca3af' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
 }
 
+/* Formula Toggle */
 .formula-toggle {
     background: none;
     border: none;
@@ -115,6 +117,7 @@ select {
     text-decoration: underline;
     cursor: pointer;
     font-size: 0.875rem;
+    margin-bottom: 1rem;
     padding: 0;
 }
 
@@ -123,10 +126,10 @@ select {
 }
 
 .formula-details {
-    margin-top: 1rem;
     background: rgba(17, 24, 39, 0.6);
     border-radius: 0.5rem;
     padding: 1rem;
+    margin-bottom: 1.5rem;
     color: #d1d5db;
     font-size: 0.875rem;
 }
@@ -141,30 +144,30 @@ select {
     margin-bottom: 0.5rem;
 }
 
-.formula-main {
+.formula-text {
     margin-bottom: 0.5rem;
 }
 
-.formula-bonuses-title {
+.formula-subtitle {
     margin-bottom: 0.25rem;
 }
 
-.formula-bonuses-list {
+.formula-list {
     margin-left: 1rem;
-    list-style: none;
 }
 
-.formula-bonuses-list li {
-    margin-bottom: 0.25rem;
+.formula-list li {
+    margin: 0.25rem 0;
 }
 
-/* Table Styles */
+/* Table */
 .table-container {
     background: rgba(31, 41, 55, 0.6);
     backdrop-filter: blur(10px);
     border-radius: 0.5rem;
     overflow: hidden;
     border: 1px solid #3b82f6;
+    margin-bottom: 1.5rem;
 }
 
 table {
@@ -195,7 +198,7 @@ tbody tr:hover {
 }
 
 tbody tr.mvp-1st {
-    background: linear-gradient(90deg, #d97706 0%, #ea580c 100%);
+    background: linear-gradient(90deg, #dc2626 0%, #ea580c 100%);
 }
 
 tbody tr.mvp-2nd {
@@ -227,12 +230,27 @@ td {
     height: 1.25rem;
 }
 
-.medal-gold { color: #fbbf24; }
-.medal-silver { color: #d1d5db; }
-.medal-bronze { color: #fb923c; }
-.award-icon { color: #60a5fa; }
+.medal-gold {
+    color: #fbbf24;
+}
 
-.score {
+.medal-silver {
+    color: #d1d5db;
+}
+
+.medal-bronze {
+    color: #fb923c;
+}
+
+.award-icon {
+    color: #60a5fa;
+}
+
+.rank-number {
+    font-weight: bold;
+}
+
+.score-value {
     font-weight: bold;
     font-size: 1.125rem;
 }
@@ -241,11 +259,22 @@ td {
     font-weight: 600;
 }
 
-.mvp-finish-1st { color: #fbbf24; font-weight: 600; }
-.mvp-finish-2nd { color: #d1d5db; font-weight: 600; }
-.mvp-finish-3rd { color: #fb923c; font-weight: 600; }
+.mvp-1st-text {
+    color: #fbbf24;
+    font-weight: 600;
+}
 
-.bonuses {
+.mvp-2nd-text {
+    color: #d1d5db;
+    font-weight: 600;
+}
+
+.mvp-3rd-text {
+    color: #fb923c;
+    font-weight: 600;
+}
+
+.bonuses-cell {
     display: flex;
     gap: 0.25rem;
     flex-wrap: wrap;
@@ -259,15 +288,28 @@ td {
     color: white;
 }
 
-.bonus-yds { background: #2563eb; }
-.bonus-td { background: #16a34a; }
-.bonus-rush-yds { background: #7c3aed; }
-.bonus-rush-td { background: #a855f7; }
-.bonus-rush-500 { background: #c084fc; }
+.bonus-yds {
+    background: #2563eb;
+}
 
-/* Top Ten Container */
-.top-ten-container {
-    margin-top: 1.5rem;
+.bonus-td {
+    background: #16a34a;
+}
+
+.bonus-rush-yds {
+    background: #7c3aed;
+}
+
+.bonus-rush-td {
+    background: #a855f7;
+}
+
+.bonus-500 {
+    background: #c084fc;
+}
+
+/* Top 10 Box */
+.top-10 {
     background: rgba(30, 58, 138, 0.4);
     backdrop-filter: blur(10px);
     border-radius: 0.5rem;
@@ -275,27 +317,35 @@ td {
     border: 1px solid #3b82f6;
 }
 
-.top-ten-container h3 {
+.top-10 h3 {
     font-size: 1.125rem;
     font-weight: bold;
     color: #93c5fd;
     margin-bottom: 0.75rem;
 }
 
-.top-ten-list {
+.top-10-list {
     color: #d1d5db;
     font-size: 0.875rem;
 }
 
-.top-ten-list p {
-    margin-bottom: 0.25rem;
+.top-10-list p {
+    margin: 0.25rem 0;
 }
 
-.rank-1 { color: #fbbf24; }
-.rank-2 { color: #d1d5db; }
-.rank-3 { color: #fb923c; }
+.gold {
+    color: #fbbf24;
+}
 
-/* Modal Styles */
+.silver {
+    color: #d1d5db;
+}
+
+.bronze {
+    color: #fb923c;
+}
+
+/* Modal */
 .modal {
     position: fixed;
     inset: 0;
@@ -315,7 +365,7 @@ td {
     background: #1f2937;
     border-radius: 0.5rem;
     padding: 1.5rem;
-    max-width: 42rem;
+    max-width: 48rem;
     width: 100%;
     border: 2px solid #3b82f6;
     max-height: 90vh;
@@ -339,7 +389,7 @@ td {
     color: #9ca3af;
 }
 
-.close-button {
+.modal-close {
     background: none;
     border: none;
     color: #9ca3af;
@@ -351,7 +401,7 @@ td {
     height: 2rem;
 }
 
-.close-button:hover {
+.modal-close:hover {
     color: white;
 }
 
@@ -365,7 +415,7 @@ td {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0.75rem;
     margin-bottom: 1rem;
 }
@@ -377,7 +427,31 @@ td {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.stat-card-title {
+.stat-card-anya {
+    background: linear-gradient(135deg, #ef4444 0%, #ea580c 100%);
+}
+
+.stat-card-cmp {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.stat-card-td {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.stat-card-int {
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+
+.stat-card-rate {
+    background: linear-gradient(135deg, #f97316 0%, #eab308 100%);
+}
+
+.stat-card-bonus {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.stat-label {
     color: white;
     font-size: 0.875rem;
     margin-bottom: 0.375rem;
@@ -385,38 +459,41 @@ td {
     opacity: 0.9;
 }
 
-.stat-card-value {
+.stat-value {
     font-size: 2.25rem;
     font-weight: bold;
     color: white;
     margin-bottom: 0.25rem;
 }
 
-.stat-card-label {
+.stat-name {
     color: white;
     font-size: 0.875rem;
     opacity: 0.8;
 }
 
-.stat-card-anya { background: linear-gradient(135deg, #ef4444 0%, #ea580c 100%); }
-.stat-card-cmp { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
-.stat-card-td { background: linear-gradient(135deg, #10b981 0%, #16a34a 100%); }
-.stat-card-int { background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); }
-.stat-card-rate { background: linear-gradient(135deg, #f97316 0%, #eab308 100%); }
-.stat-card-bonus { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); }
+.bonus-badges {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-center;
+    margin-bottom: 0.25rem;
+}
+
+.bonus-badge-modal {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
 
 .season-stats {
     background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
     border-radius: 0.5rem;
     padding: 1rem;
     margin-top: 0.5rem;
-}
-
-.season-stats h3 {
-    color: white;
-    font-weight: bold;
-    font-size: 1.125rem;
-    margin-bottom: 0.75rem;
 }
 
 .season-stats-grid {
@@ -426,6 +503,7 @@ td {
 }
 
 .season-stat-card {
+    background: rgba(249, 115, 22, 0.4);
     border-radius: 0.5rem;
     padding: 0.75rem;
     text-align: center;
@@ -435,21 +513,14 @@ td {
     background: rgba(34, 197, 94, 0.4);
 }
 
-.season-stat-card.non-leader {
-    background: rgba(249, 115, 22, 0.4);
-}
-
-.season-stat-title {
+.season-stat-label {
     font-size: 0.75rem;
-    margin-bottom: 0.375rem;
-}
-
-.season-stat-title.leader {
-    color: #bbf7d0;
-}
-
-.season-stat-title.non-leader {
+    margin-bottom: 0.25rem;
     color: #fed7aa;
+}
+
+.season-stat-card.leader .season-stat-label {
+    color: #bbf7d0;
 }
 
 .season-stat-value {
@@ -459,60 +530,57 @@ td {
     margin-bottom: 0.25rem;
 }
 
-.season-stat-label {
+.season-stat-name {
     font-size: 0.75rem;
     margin-top: 0.25rem;
-}
-
-.season-stat-label.leader {
-    color: #bbf7d0;
-}
-
-.season-stat-label.non-leader {
     color: #fed7aa;
 }
 
-.close-button-bottom {
+.season-stat-card.leader .season-stat-name {
+    color: #bbf7d0;
+}
+
+.modal-close-btn {
     width: 100%;
     margin-top: 1rem;
     background: #2563eb;
     color: white;
     font-weight: bold;
     padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
+    border-radius: 0.25rem;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    transition: background 0.2s;
 }
 
-.close-button-bottom:hover {
+.modal-close-btn:hover {
     background: #1d4ed8;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
-    
+
     .trophy-icon {
         width: 2.5rem;
         height: 2.5rem;
     }
-    
+
     .subtitle {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
-    
+
     th, td {
         font-size: 0.75rem;
         padding: 0.5rem;
     }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
+
+    .stat-value {
+        font-size: 1.5rem;
     }
-    
+
     .season-stats-grid {
         grid-template-columns: 1fr;
     }
