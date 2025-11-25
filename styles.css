@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(to bottom right, #111827, #1e3a8a, #065f46);
     min-height: 100vh;
     padding: 2rem 1rem;
 }
@@ -197,12 +197,13 @@ tbody tr:hover {
     filter: brightness(1.1);
 }
 
+/* MVP Finish Colors - Matching React Artifact */
 tbody tr.mvp-1st {
-    background: linear-gradient(90deg, #dc2626 0%, #ea580c 100%);
+    background: linear-gradient(to right, #ca8a04, #ea580c);
 }
 
 tbody tr.mvp-2nd {
-    background: linear-gradient(90deg, #1d4ed8 0%, #4338ca 100%);
+    background: linear-gradient(to right, #1d4ed8, #4338ca);
 }
 
 tbody tr.mvp-3rd {
@@ -230,7 +231,7 @@ td {
     height: 1.25rem;
 }
 
-.medal-gold {
+.medal-icon {
     color: #fbbf24;
 }
 
@@ -427,28 +428,29 @@ td {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Stat Card Colors - Matching React Artifact */
 .stat-card-anya {
-    background: linear-gradient(135deg, #ef4444 0%, #ea580c 100%);
+    background: linear-gradient(to bottom right, #ef4444, #ea580c);
 }
 
 .stat-card-cmp {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(to bottom right, #3b82f6, #2563eb);
 }
 
 .stat-card-td {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(to bottom right, #10b981, #16a34a);
 }
 
 .stat-card-int {
-    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    background: linear-gradient(to bottom right, #8b5cf6, #ec4899);
 }
 
 .stat-card-rate {
-    background: linear-gradient(135deg, #f97316 0%, #eab308 100%);
+    background: linear-gradient(to bottom right, #f97316, #eab308);
 }
 
 .stat-card-bonus {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
 }
 
 .stat-label {
@@ -490,7 +492,7 @@ td {
 }
 
 .season-stats {
-    background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+    background: linear-gradient(to bottom right, #ea580c, #dc2626);
     border-radius: 0.5rem;
     padding: 1rem;
     margin-top: 0.5rem;
