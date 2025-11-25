@@ -38,32 +38,35 @@ const sortedSeasons = [
   { rank: 36, score: 322.5, player: "Brock Purdy", season: "2023", team: "49ers", mvpFinish: "4th", anyaPlus: 146, cmpPlus: 124, tdPlus: 137, intPlus: 96, ratePlus: 142 },
   { rank: 37, score: 321.5, player: "Steve Young", season: "1998", team: "49ers", mvpFinish: "2nd", anyaPlus: 125, cmpPlus: 123, tdPlus: 130, intPlus: 112, ratePlus: 128 },
   { rank: 38, score: 321.0, player: "Roger Staubach", season: "1973", team: "Cowboys", mvpFinish: "3rd", anyaPlus: 121, cmpPlus: 133, tdPlus: 135, intPlus: 100, ratePlus: 133 },
-   { rank: 31, score: 320.5, player: "Peyton Manning", season: "2000", team: "Colts", mvpFinish: "6th", anyaPlus: 127, cmpPlus: 118, tdPlus: 122, intPlus: 111, ratePlus: 123, ydsLeader: true, tdLeader: true, rushYdsLeader: false, rushTdLeader: false },
-  { rank: 39, score: 320.0, player: "Jim Kelly", season: "1990", team: "Bills", mvpFinish: "5th", anyaPlus: 131, cmpPlus: 126, tdPlus: 134, intPlus: 114, ratePlus: 135 },
-  { rank: 40, score: 320.0, player: "Steve Young", season: "1997", team: "49ers", mvpFinish: "2nd", anyaPlus: 128, cmpPlus: 142, tdPlus: 114, intPlus: 122, ratePlus: 134 },
-  { rank: 41, score: 319.5, player: "Aaron Rodgers", season: "2014", team: "Packers", mvpFinish: "1st", anyaPlus: 135, cmpPlus: 113, tdPlus: 132, intPlus: 127, ratePlus: 132 },
-  { rank: 42, score: 319.5, player: "Patrick Mahomes", season: "2022", team: "Chiefs", mvpFinish: "1st", anyaPlus: 129, cmpPlus: 112, tdPlus: 124, intPlus: 110, ratePlus: 124 },
-  { rank: 43, score: 319.5, player: "Dak Prescott", season: "2023", team: "Cowboys", mvpFinish: "2nd", anyaPlus: 121, cmpPlus: 125, tdPlus: 126, intPlus: 118, ratePlus: 129 },
-  { rank: 44, score: 319.0, player: "Tony Romo", season: "2014", team: "Cowboys", mvpFinish: "4th", anyaPlus: 128, cmpPlus: 130, tdPlus: 138, intPlus: 108, ratePlus: 134 },
-  { rank: 45, score: 318.5, player: "Drew Brees", season: "2004", team: "Chargers", mvpFinish: "6th", anyaPlus: 129, cmpPlus: 120, tdPlus: 132, intPlus: 125, ratePlus: 131 },
-  { rank: 46, score: 317.5, player: "Peyton Manning", season: "2006", team: "Colts", mvpFinish: "3rd", anyaPlus: 131, cmpPlus: 116, tdPlus: 118, intPlus: 124, ratePlus: 126 },
-  { rank: 47, score: 317.5, player: "Rich Gannon", season: "2002", team: "Raiders", mvpFinish: "1st", anyaPlus: 126, cmpPlus: 130, tdPlus: 104, intPlus: 127, ratePlus: 128 },
-  { rank: 48, score: 317.0, player: "Jim Kelly", season: "1991", team: "Bills", mvpFinish: "2nd", anyaPlus: 123, cmpPlus: 126, tdPlus: 136, intPlus: 100, ratePlus: 129 },
-  { rank: 49, score: 316.5, player: "Philip Rivers", season: "2008", team: "Chargers", mvpFinish: "3rd", anyaPlus: 128, cmpPlus: 114, tdPlus: 134, intPlus: 110, ratePlus: 127 },
-  { rank: 50, score: 316.5, player: "Ken Anderson", season: "1975", team: "Bengals", mvpFinish: "5th", anyaPlus: 129, cmpPlus: 122, tdPlus: 113, intPlus: 122, ratePlus: 127 },
-  { rank: 51, score: 316.0, player: "Fran Tarkenton", season: "1975", team: "Vikings", mvpFinish: "1st", anyaPlus: 118, cmpPlus: 133, tdPlus: 116, intPlus: 120, ratePlus: 125 },
-  { rank: 52, score: 315.5, player: "Donovan McNabb", season: "2004", team: "Eagles", mvpFinish: "2nd", anyaPlus: 130, cmpPlus: 115, tdPlus: 130, intPlus: 125, ratePlus: 131 },
-  { rank: 53, score: 315.0, player: "Peyton Manning", season: "2003", team: "Colts", mvpFinish: "1st", anyaPlus: 125, cmpPlus: 124, tdPlus: 113, intPlus: 124, ratePlus: 124 },
-  { rank: 54, score: 314.5, player: "Brett Favre", season: "2009", team: "Vikings", mvpFinish: "2nd", anyaPlus: 123, cmpPlus: 125, tdPlus: 126, intPlus: 123, ratePlus: 129 },
-  { rank: 55, score: 314.5, player: "Vinny Testaverde", season: "1998", team: "Jets", mvpFinish: "5th", anyaPlus: 129, cmpPlus: 120, tdPlus: 129, intPlus: 122, ratePlus: 129 },
-  { rank: 56, score: 314.0, player: "Roger Staubach", season: "1979", team: "Cowboys", mvpFinish: "5th", anyaPlus: 133, cmpPlus: 111, tdPlus: 121, intPlus: 131, ratePlus: 132 },
-{ rank: 58, score: 313.0, player: "Brett Favre", season: "2009", team: "Vikings", mvpFinish: "2nd", anyaPlus: 123, cmpPlus: 125, tdPlus: 126, intPlus: 123, ratePlus: 129, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
-{ rank: 59, score: 313.0, player: "Mark Rypien", season: "1991", team: "Washington", mvpFinish: "1st", anyaPlus: 141, cmpPlus: 108, tdPlus: 132, intPlus: 115, ratePlus: 130, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
-{ rank: 60, score: 312.0, player: "Terry Bradshaw", season: "1978", team: "Steelers", mvpFinish: "1st", anyaPlus: 127, cmpPlus: 111, tdPlus: 143, intPlus: 97, ratePlus: 126, ydsLeader: false, tdLeader: true, rushYdsLeader: false, rushTdLeader: false },
-{ rank: 61, score: 312.0, player: "Fran Tarkenton", season: "1973", team: "Vikings", mvpFinish: "5th", anyaPlus: 122, cmpPlus: 130, tdPlus: 112, intPlus: 128, ratePlus: 132, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
-{ rank: 62, score: 312.0, player: "Peyton Manning", season: "2005", team: "Colts", mvpFinish: "2nd", anyaPlus: 130, cmpPlus: 125, tdPlus: 124, intPlus: 116, ratePlus: 129, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
-{ rank: 63, score: 311.0, player: "Aaron Rodgers", season: "2021", team: "Packers", mvpFinish: "1st", anyaPlus: 123, cmpPlus: 117, tdPlus: 124, intPlus: 130, ratePlus: 128, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 39, score: 320.5, player: "Peyton Manning", season: "2000", team: "Colts", mvpFinish: "6th", anyaPlus: 127, cmpPlus: 118, tdPlus: 122, intPlus: 111, ratePlus: 123, ydsLeader: true, tdLeader: true, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 40, score: 320.0, player: "Jim Kelly", season: "1990", team: "Bills", mvpFinish: "5th", anyaPlus: 131, cmpPlus: 126, tdPlus: 134, intPlus: 114, ratePlus: 135 },
+  { rank: 41, score: 320.0, player: "Steve Young", season: "1997", team: "49ers", mvpFinish: "2nd", anyaPlus: 128, cmpPlus: 142, tdPlus: 114, intPlus: 122, ratePlus: 134 },
+  { rank: 42, score: 319.5, player: "Aaron Rodgers", season: "2014", team: "Packers", mvpFinish: "1st", anyaPlus: 135, cmpPlus: 113, tdPlus: 132, intPlus: 127, ratePlus: 132 },
+  { rank: 43, score: 319.5, player: "Patrick Mahomes", season: "2022", team: "Chiefs", mvpFinish: "1st", anyaPlus: 129, cmpPlus: 112, tdPlus: 124, intPlus: 110, ratePlus: 124 },
+  { rank: 44, score: 319.5, player: "Dak Prescott", season: "2023", team: "Cowboys", mvpFinish: "2nd", anyaPlus: 121, cmpPlus: 125, tdPlus: 126, intPlus: 118, ratePlus: 129 },
+  { rank: 45, score: 319.0, player: "Tony Romo", season: "2014", team: "Cowboys", mvpFinish: "4th", anyaPlus: 128, cmpPlus: 130, tdPlus: 138, intPlus: 108, ratePlus: 134 },
+  { rank: 46, score: 318.5, player: "Drew Brees", season: "2004", team: "Chargers", mvpFinish: "6th", anyaPlus: 129, cmpPlus: 120, tdPlus: 132, intPlus: 125, ratePlus: 131 },
+  { rank: 47, score: 317.5, player: "Peyton Manning", season: "2006", team: "Colts", mvpFinish: "3rd", anyaPlus: 131, cmpPlus: 116, tdPlus: 118, intPlus: 124, ratePlus: 126 },
+  { rank: 48, score: 317.5, player: "Rich Gannon", season: "2002", team: "Raiders", mvpFinish: "1st", anyaPlus: 126, cmpPlus: 130, tdPlus: 104, intPlus: 127, ratePlus: 128 },
+  { rank: 49, score: 317.0, player: "Jim Kelly", season: "1991", team: "Bills", mvpFinish: "2nd", anyaPlus: 123, cmpPlus: 126, tdPlus: 136, intPlus: 100, ratePlus: 129 },
+  { rank: 50, score: 316.5, player: "Philip Rivers", season: "2008", team: "Chargers", mvpFinish: "3rd", anyaPlus: 128, cmpPlus: 114, tdPlus: 134, intPlus: 110, ratePlus: 127 },
+  { rank: 51, score: 316.5, player: "Ken Anderson", season: "1975", team: "Bengals", mvpFinish: "5th", anyaPlus: 129, cmpPlus: 122, tdPlus: 113, intPlus: 122, ratePlus: 127 },
+  { rank: 52, score: 316.0, player: "Fran Tarkenton", season: "1975", team: "Vikings", mvpFinish: "1st", anyaPlus: 118, cmpPlus: 133, tdPlus: 116, intPlus: 120, ratePlus: 125 },
+  { rank: 53, score: 315.5, player: "Donovan McNabb", season: "2004", team: "Eagles", mvpFinish: "2nd", anyaPlus: 130, cmpPlus: 115, tdPlus: 130, intPlus: 125, ratePlus: 131 },
+  { rank: 54, score: 315.0, player: "Peyton Manning", season: "2003", team: "Colts", mvpFinish: "1st", anyaPlus: 125, cmpPlus: 124, tdPlus: 113, intPlus: 124, ratePlus: 124 },
+  { rank: 55, score: 314.5, player: "Brett Favre", season: "2009", team: "Vikings", mvpFinish: "2nd", anyaPlus: 123, cmpPlus: 125, tdPlus: 126, intPlus: 123, ratePlus: 129 },
+  { rank: 56, score: 314.5, player: "Vinny Testaverde", season: "1998", team: "Jets", mvpFinish: "5th", anyaPlus: 129, cmpPlus: 120, tdPlus: 129, intPlus: 122, ratePlus: 129 },
+  { rank: 57, score: 314.0, player: "Roger Staubach", season: "1979", team: "Cowboys", mvpFinish: "5th", anyaPlus: 133, cmpPlus: 111, tdPlus: 121, intPlus: 131, ratePlus: 132 },
+  { rank: 58, score: 313.0, player: "Brett Favre", season: "2009", team: "Vikings", mvpFinish: "2nd", anyaPlus: 123, cmpPlus: 125, tdPlus: 126, intPlus: 123, ratePlus: 129, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 59, score: 313.0, player: "Mark Rypien", season: "1991", team: "Washington", mvpFinish: "1st", anyaPlus: 141, cmpPlus: 108, tdPlus: 132, intPlus: 115, ratePlus: 130, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 60, score: 312.0, player: "Terry Bradshaw", season: "1978", team: "Steelers", mvpFinish: "1st", anyaPlus: 127, cmpPlus: 111, tdPlus: 143, intPlus: 97, ratePlus: 126, ydsLeader: false, tdLeader: true, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 61, score: 312.0, player: "Fran Tarkenton", season: "1973", team: "Vikings", mvpFinish: "5th", anyaPlus: 122, cmpPlus: 130, tdPlus: 112, intPlus: 128, ratePlus: 132, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 62, score: 312.0, player: "Peyton Manning", season: "2005", team: "Colts", mvpFinish: "2nd", anyaPlus: 130, cmpPlus: 125, tdPlus: 124, intPlus: 116, ratePlus: 129, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false },
+  { rank: 63, score: 311.0, player: "Aaron Rodgers", season: "2021", team: "Packers", mvpFinish: "1st", anyaPlus: 123, cmpPlus: 117, tdPlus: 124, intPlus: 130, ratePlus: 128, ydsLeader: false, tdLeader: false, rushYdsLeader: false, rushTdLeader: false }
 ];
+
+// Create reference to allSeasons for the rest of the code
+const allSeasons = sortedSeasons;
 
 // Initialize filters
 function initializeFilters() {
@@ -256,73 +259,140 @@ function openModal(season) {
             <p class="stat-card-value">${season.ratePlus}</p>
             <p class="stat-card-label">Rate+</p>
         </div>
-        <div class="stat-card stat-card-bonus">
+       <div class="stat-card stat-card-bonus">
             <p class="stat-card-title">League Leader Bonuses</p>
             ${(season.ydsLeader || season.tdLeader || season.rushYdsLeader || season.rushTdLeader || season.rushYds500Plus) ? `
-                <div style="display: flex; gap: 0.25rem; margin-bottom: 0.25rem; flex-wrap: wrap; justify-content: center;">
-                    ${season.ydsLeader ? '<span style="background: rgba(255, 255, 255, 0.3); color: white; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">YDS</span>' : ''}
-                    ${season.tdLeader ? '<span style="background: rgba(255, 255, 255, 0.3); color: white; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">TD</span>' : ''}
-                    ${season.rushYdsLeader ? '<span style="background: rgba(255, 255, 255, 0.3); color: white; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">R-YDS</span>' : ''}
-                    ${season.rushTdLeader ? '<span style="background: rgba(255, 255, 255, 0.3); color: white; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">R-TD</span>' : ''}
-                    ${season.rushYds500Plus ? '<span style="background: rgba(255, 255, 255, 0.3); color: white; font-size: 0.75rem; font-weight: bold; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">500+</span>' : ''}
+                <div class="bonus-badges-modal">
+                    ${season.ydsLeader ? '<span class="bonus-badge-modal">YDS</span>' : ''}
+                    ${season.tdLeader ? '<span class="bonus-badge-modal">TD</span>' : ''}
+                    ${season.rushYdsLeader ? '<span class="bonus-badge-modal">R-YDS</span>' : ''}
+                    ${season.rushTdLeader ? '<span class="bonus-badge-modal">R-TD</span>' : ''}
+                    ${season.rushYds500Plus ? '<span class="bonus-badge-modal">500+</span>' : ''}
                 </div>
                 <p class="stat-card-value">+${((season.ydsLeader ? 10 : 0) + (season.tdLeader ? 10 : 0) + (season.rushYdsLeader ? 5 : 0) + (season.rushTdLeader ? 2.5 : 0) + (season.rushYds500Plus ? 2.5 : 0)).toFixed(1)}</p>
-            ` : '<p class="stat-card-value">—</p>'}
+            ` : `
+                <p class="stat-card-value">—</p>
+            `}
             <p class="stat-card-label">Bonus Points</p>
         </div>
     `;
 
-    // Season stats
+    // Season statistics with actual data
+    const passYds = getPassingYards(season.player, season.season);
+    const passTDs = getPassingTDs(season.player, season.season);
+    const ints = getInterceptions(season.player, season.season);
+
     seasonStats.innerHTML = `
-        <h3>Season Statistics</h3>
-        <div class="season-stats-grid">
-            <div class="season-stat-card ${season.ydsLeader ? 'leader' : 'non-leader'}">
-                <p class="season-stat-title ${season.ydsLeader ? 'leader' : 'non-leader'}">Passing Yards</p>
-                <p class="season-stat-value">${season.passYds || 'N/A'}</p>
-                <p class="season-stat-label ${season.ydsLeader ? 'leader' : 'non-leader'}">YDS</p>
-            </div>
-            <div class="season-stat-card ${season.tdLeader ? 'leader' : 'non-leader'}">
-                <p class="season-stat-title ${season.tdLeader ? 'leader' : 'non-leader'}">Passing TDs</p>
-                <p class="season-stat-value">${season.passTd || 'N/A'}</p>
-                <p class="season-stat-label ${season.tdLeader ? 'leader' : 'non-leader'}">TD</p>
-            </div>
-            <div class="season-stat-card non-leader">
-                <p class="season-stat-title non-leader">Interceptions</p>
-                <p class="season-stat-value">${season.passInt || 'N/A'}</p>
-                <p class="season-stat-label non-leader">INT</p>
-            </div>
+        <div class="season-stat ${season.ydsLeader ? 'season-stat-leader' : ''}">
+            <p class="season-stat-label">Passing Yards</p>
+            <p class="season-stat-value">${passYds}</p>
+            <p class="season-stat-sublabel">YDS</p>
+        </div>
+        <div class="season-stat ${season.tdLeader ? 'season-stat-leader' : ''}">
+            <p class="season-stat-label">Passing TDs</p>
+            <p class="season-stat-value">${passTDs}</p>
+            <p class="season-stat-sublabel">TD</p>
+        </div>
+        <div class="season-stat">
+            <p class="season-stat-label">Interceptions</p>
+            <p class="season-stat-value">${ints}</p>
+            <p class="season-stat-sublabel">INT</p>
         </div>
     `;
 
-    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
 }
 
 // Close modal
 function closeModal() {
-    const modal = document.getElementById('modal');
-    modal.classList.add('hidden');
+    document.getElementById('modal').style.display = 'none';
+}
+
+// Helper functions to get actual stats
+function getPassingYards(player, season) {
+    const statsMap = {
+        "Peyton Manning-2004": "4,557",
+        "Tom Brady-2007": "4,806",
+        "Dan Marino-1984": "5,084",
+        "Steve Young-1994": "3,969",
+        "Peyton Manning-2013": "5,477",
+        "Aaron Rodgers-2011": "4,643",
+        "Joe Montana-1989": "3,521",
+        "Aaron Rodgers-2020": "4,299",
+        "Steve Young-1992": "3,465",
+        "Lamar Jackson-2024": "4,172",
+        "Drew Brees-2011": "5,476",
+        "Joe Burrow-2024": "4,918"
+        // Add more as needed
+    };
+    return statsMap[`${player}-${season}`] || "N/A";
+}
+
+function getPassingTDs(player, season) {
+    const statsMap = {
+        "Peyton Manning-2004": "49",
+        "Tom Brady-2007": "50",
+        "Dan Marino-1984": "48",
+        "Steve Young-1994": "35",
+        "Peyton Manning-2013": "55",
+        "Aaron Rodgers-2011": "45",
+        "Joe Montana-1989": "26",
+        "Aaron Rodgers-2020": "48",
+        "Steve Young-1992": "25",
+        "Lamar Jackson-2024": "41",
+        "Drew Brees-2011": "46",
+        "Joe Burrow-2024": "43"
+        // Add more as needed
+    };
+    return statsMap[`${player}-${season}`] || "N/A";
+}
+
+function getInterceptions(player, season) {
+    const statsMap = {
+        "Peyton Manning-2004": "10",
+        "Tom Brady-2007": "8",
+        "Dan Marino-1984": "17",
+        "Steve Young-1994": "10",
+        "Peyton Manning-2013": "10",
+        "Aaron Rodgers-2011": "6",
+        "Joe Montana-1989": "8",
+        "Aaron Rodgers-2020": "5",
+        "Steve Young-1992": "7",
+        "Lamar Jackson-2024": "4",
+        "Drew Brees-2011": "14",
+        "Joe Burrow-2024": "9"
+        // Add more as needed
+    };
+    return statsMap[`${player}-${season}`] || "N/A";
+}
+
+// Toggle formula display
+function toggleFormula() {
+    const formula = document.getElementById('formulaDetails');
+    const button = document.getElementById('formulaButton');
+    if (formula.style.display === 'none') {
+        formula.style.display = 'block';
+        button.textContent = 'Hide Formula Details';
+    } else {
+        formula.style.display = 'none';
+        button.textContent = 'Show Formula Details';
+    }
 }
 
 // Event listeners
+document.getElementById('searchInput').addEventListener('input', renderTable);
+document.getElementById('playerFilter').addEventListener('change', renderTable);
+document.getElementById('eraFilter').addEventListener('change', renderTable);
+document.getElementById('leaderFilter').addEventListener('change', renderTable);
+document.getElementById('formulaButton').addEventListener('click', toggleFormula);
+document.getElementById('closeModal').addEventListener('click', closeModal);
+document.getElementById('closeModalButton').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target.id === 'modal') closeModal();
+});
+
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     initializeFilters();
     renderTable();
-
-    document.getElementById('searchInput').addEventListener('input', renderTable);
-    document.getElementById('playerFilter').addEventListener('change', renderTable);
-    document.getElementById('eraFilter').addEventListener('change', renderTable);
-    document.getElementById('leaderFilter').addEventListener('change', renderTable);
-
-    document.getElementById('toggleFormula').addEventListener('click', () => {
-        const formulaDetails = document.getElementById('formulaDetails');
-        const toggleButton = document.getElementById('toggleFormula');
-        formulaDetails.classList.toggle('hidden');
-        toggleButton.textContent = formulaDetails.classList.contains('hidden') ? 'Show Formula Details' : 'Hide Formula Details';
-    });
-
-    document.getElementById('closeModal').addEventListener('click', closeModal);
-    document.getElementById('closeModalBottom').addEventListener('click', closeModal);
-    document.getElementById('modal').addEventListener('click', (e) => {
-        if (e.target.id === 'modal') closeModal();
-    });
 });
