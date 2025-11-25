@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest NFL QB Seasons - MVP Top 3 Rankings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <svg class="trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                    <path d="M4 22h16"></path>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg>
+                <h1>Greatest QB Seasons</h1>
+                <svg class="trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                    <path d="M4 22h16"></path>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg>
+            </div>
+            <p class="subtitle">NFL History</p>
+        </div>
+
+        <div class="filters-container">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label>Search</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Player, team, or year...">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Filter by Player</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        <select id="playerFilter"></select>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Filter by Era</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                            <polyline points="16 7 22 7 22 13"></polyline>
+                        </svg>
+                        <select id="eraFilter"></select>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Filter by Leader Category</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <select id="leaderFilter"></select>
+                    </div>
+                </div>
+            </div>
+            <button id="toggleFormula" class="formula-toggle">Show Formula Details</button>
+            <div id="formulaDetails" class="formula-details hidden">
+                <p class="formula-title">Scoring Formula:</p>
+                <p class="formula-main">Score = (ANY/A+ ÷ 2) + (Cmp%+ ÷ 2) + (TD%+ ÷ 2) + (INT%+ ÷ 2) + (Rate+ ÷ 2) + Bonuses</p>
+                <p class="formula-bonuses-title"><strong>Bonuses:</strong></p>
+                <ul class="formula-bonuses-list">
+                    <li>• League Leader Passing Yards: +10 pts</li>
+                    <li>• League Leader Passing TDs: +10 pts</li>
+                    <li>• QB Leader Rushing Yards: +5 pts</li>
+                    <li>• QB Leader Rushing TDs: +2.5 pts</li>
+                    <li>• 500+ QB Rushing Yards (non-leader): +2.5 pts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="seasonsTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Score</th>
+                        <th>Player</th>
+                        <th>Season</th>
+                        <th>Team</th>
+                        <th>MVP</th>
+                        <th>Bonuses</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="top-ten-container">
+            <h3>🏈 Top 10 All-Time QB Seasons</h3>
+            <div class="top-ten-list">
+                <p><strong class="rank-1">1. Peyton Manning 2004:</strong> 369.5</p>
+                <p><strong class="rank-2">2. Tom Brady 2007:</strong> 369.0</p>
+                <p><strong class="rank-3">3. Dan Marino 1984:</strong> 360.5</p>
+                <p><strong>4. Steve Young 1994:</strong> 356.5</p>
+                <p><strong>5. Peyton Manning 2013:</strong> 353.0</p>
+                <p><strong>6. Aaron Rodgers 2011:</strong> 351.5</p>
+                <p><strong>7. Joe Montana 1989:</strong> 348.5</p>
+                <p><strong>8. Aaron Rodgers 2020:</strong> 347.0</p>
+                <p><strong>9. Steve Young 1992:</strong> 345.5</p>
+                <p><strong>10. Lamar Jackson 2024:</strong> 342.5</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalSubtitle"></p>
+                </div>
+                <button id="closeModal" class="close-button">×</button>
+            </div>
+            <div class="modal-body">
+                <h3>Index Stats Breakdown</h3>
+                <div id="statsGrid" class="stats-grid"></div>
+                <div id="seasonStats" class="season-stats"></div>
+            </div>
+            <button id="closeModalBottom" class="close-button-bottom">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
