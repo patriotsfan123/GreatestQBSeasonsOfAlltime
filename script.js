@@ -17,9 +17,25 @@ const seasonStatsGrid = document.getElementById('seasonStatsGrid');
 // Initialize
 let selectedSeason = null;
 
+// Sort and rank all seasons once at startup
+const rankedSeasons = [...allSeasons].sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    
+    const aBonuses = (a.ydsLeader ? 1 : 0) + (a.tdLeader ? 1 : 0) + 
+                    (a.rushYdsLeader ? 1 : 0) + (a.rushTdLeader ? 1 : 0);
+    const bBonuses = (b.ydsLeader ? 1 : 0) + (b.tdLeader ? 1 : 0) + 
+                    (b.rushYdsLeader ? 1 : 0) + (b.rushTdLeader ? 1 : 0);
+    if (bBonuses !== aBonuses) return bBonuses - aBonuses;
+    
+    return a.player.localeCompare(b.player);
+}).map((season, index) => ({
+    ...season,
+    actualRank: index + 1
+}));
+
 // Populate player filter
 function populatePlayerFilter() {
-    const players = ['All', ...new Set(allSeasons.map(s => s.player))].sort((a, b) => {
+    const players = ['All', ...new Set(rankedSeasons.map(s => s.player))].sort((a, b) => {
         if (a === 'All') return -1;
         if (b === 'All') return 1;
         return a.localeCompare(b);
@@ -92,7 +108,7 @@ function filterSeasons() {
     const eraValue = eraFilter.value;
     const leaderValue = leaderFilter.value;
     
-    return allSeasons.filter(season => {
+    return rankedSeasons.filter(season => {
         // Search filter
         const matchesSearch = season.player.toLowerCase().includes(searchTerm) ||
                              season.season.includes(searchTerm) ||
@@ -126,28 +142,9 @@ function filterSeasons() {
 function renderTable() {
     const filtered = filterSeasons();
     
-    // Sort by score (descending), then by bonuses, then alphabetically
-    const sorted = [...filtered].sort((a, b) => {
-        if (b.score !== a.score) return b.score - a.score;
-        
-        const aBonuses = (a.ydsLeader ? 1 : 0) + (a.tdLeader ? 1 : 0) + 
-                        (a.rushYdsLeader ? 1 : 0) + (a.rushTdLeader ? 1 : 0);
-        const bBonuses = (b.ydsLeader ? 1 : 0) + (b.tdLeader ? 1 : 0) + 
-                        (b.rushYdsLeader ? 1 : 0) + (b.rushTdLeader ? 1 : 0);
-        if (bBonuses !== aBonuses) return bBonuses - aBonuses;
-        
-        return a.player.localeCompare(b.player);
-    });
-    
-    // Re-rank filtered results
-    const rankedSeasons = sorted.map((season, index) => ({
-        ...season,
-        displayRank: index + 1
-    }));
-    
     tableBody.innerHTML = '';
     
-    rankedSeasons.forEach(season => {
+    filtered.forEach(season => {
         const row = document.createElement('tr');
         row.className = getRowClass(season.mvpFinish);
         row.onclick = () => openModal(season);
@@ -155,8 +152,8 @@ function renderTable() {
         row.innerHTML = `
             <td>
                 <div class="rank-cell">
-                    ${getMedalIcon(season.displayRank)}
-                    <span class="rank-number">#${season.displayRank}</span>
+                    ${getMedalIcon(season.actualRank)}
+                    <span class="rank-number">#${season.actualRank}</span>
                 </div>
             </td>
             <td><span class="score-value">${season.score.toFixed(1)}</span></td>
